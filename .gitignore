@@ -1,0 +1,12 @@
+banlist.dat
+blocks/
+chainstate/
+core
+db.log
+debug.log
+fee_estimates.dat
+mempool.dat
+peers.dat
+wallet.dat
+.lock
+.walletlock
