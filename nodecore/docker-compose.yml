@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  nodecore:
+    container_name: nodecore
+    image: veriblock/nodecore:0.4.13-rc.14.dev.2
+    expose:
+      - 7500 # p2p
+      - 10500 # rpc
+      - 10600 # api
+    ports:
+      - 0.0.0.0:7500:7500
+      - 127.0.0.1:10500:10500
+      - 127.0.0.1:10600:10600
+    volumes:
+      - ./data:/data:rw
+    environment:
+      - NODECORE_LOG_PATH=/data/
+      - NODECORE_LOG_LEVEL=INFO
+    entrypoint: ""
+    command: ./nodecore -d /data
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,9 @@
+*.tar.gz
+*.dat
+data/testnet/*
+*.dat-shm
+*.dat-wal
+*.csh
+*.csh-shm
+*.csh-wal
+bootstrap-downloader-*
